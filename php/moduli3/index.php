@@ -45,9 +45,25 @@ switch($day){
         break;
  
 
+
+
+}
+for($num = 50; $num <=100; $num+=2){
+    echo"$num <br>";
+}
+$students = ["bled","olsa","dorant","nil","blin","and"];
+
+foreach($students as $student){
+    echo $student . "<br>";
 }
 
 
+$x="abc";
+while(strlen($x)<11){
+    echo $x;
+    $x = $x.'d';
+    echo "<br>";
+}
 
 
 
