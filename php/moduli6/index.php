@@ -17,8 +17,10 @@ $newfile = fopen("exampel.txt", "a");
 fwrite($newfile, "hi");
 echo $newfile;
 
+$my_file = fopen("data.txt" , "w+");
+fwrite($my_file, "Data test 1");
 
-
-
+$my_file = fopen("data.txt" , "a+");
+fwrite($my_file, "\nData test 2");
 
 ?>
