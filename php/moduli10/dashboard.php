@@ -29,22 +29,22 @@ $users = $getUsers->fetchAll();
         <th>surname</th>
         <th>email</th>
     </thead>
-    <tbody>
-        <?php
-        foreach($users as $user){
-            ?>
-            <tr>
-                <td><?= $user['id']?></td>
-                <td><?= $user['name']?></td>
-                <td><?= $user['surname']?></td>
-                <td><?= $user['email']?></td>
-        </tr>
-        <?php
-        }
+<tbody>
+    <?php
+    foreach($users as $user){
         ?>
-    </tbody>
-    </table>
-    <a href="index.php">Add User</a>
+        <tr>
+            <td><?= $user['id']?></td>
+            <td><?= $user['name']?></td>
+            <td><?= $user['surname']?></td>
+            <td><?= $user['email']?></td>
+    </tr>
+    <?php
+    }
+    ?>
+</tbody>
+</table>
+<a href="index.php">Add User</a>
 </table>
 </body>
 </html>

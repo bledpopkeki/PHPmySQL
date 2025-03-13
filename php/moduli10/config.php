@@ -10,6 +10,6 @@ $dbname = 'dita10';
         $conn = new PDO("mysql:host=$server;dbname=$dbname;",$user,$pass);
 
     } catch(Exception $e){
-        echo "error";
+        echo "error ".$e;
     }
 ?>
