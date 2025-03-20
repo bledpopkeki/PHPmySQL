@@ -8,7 +8,9 @@ $prep = $conn->prepare($sql);
 
 $prep->bindParam(':id',$id);
 
-$prep->execute()
+$prep->execute();
+
+$data = $prep->fetch();
 
 
 ?>
@@ -35,13 +37,13 @@ $prep->execute()
             cursor: pointer;
         }
     </style>
-    <form action="" method="POST">
+    <form action="update" method="POST">
         <input type="hidden" name="id" value="<?= $data ['id']?>"><br>
         <input type="text" name="name" value="<?= $data ['name']?>"><br>
         <input type="text" name="surname" value="<?= $data ['surname']?>"><br>
         <input type="email" name="email" value="<?= $data ['email']?>"><br>
         <input type="number" name="age" value="<?= $data ['age']?>"><br>
-
+        
         <br><br>
     </form>
     <a href="dashboard.php">Dashboard</a>

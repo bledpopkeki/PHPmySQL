@@ -40,10 +40,13 @@ $users = $getUsers->fetchAll();
             <td><?= $user['surname']?></td>
             <td><?= $user['email']?></td>
             <td><?= $user['age']?></td>
+            <td><?="<a href='edit.php?id=$user[id]'>Update</a>"?></td>
+            <td><?="<a href='delete.php?id=$user[id]'>Delete</a>"?></td>
     </tr>
     <?php
     }
     ?>
+    <a href="edit.php?id=1">Edit</a>
 </tbody>
 </table>
 <a href="index.php">Add User</a>
