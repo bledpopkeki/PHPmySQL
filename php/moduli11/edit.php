@@ -44,7 +44,9 @@ $data = $prep->fetch();
         <input type="email" name="email" value="<?= $data ['email']?>"><br>
         <input type="number" name="age" value="<?= $data ['age']?>"><br>
         
+
         <br><br>
+        <button type="submit" name="update">update</button>
     </form>
     <a href="dashboard.php">Dashboard</a>
 </body>
