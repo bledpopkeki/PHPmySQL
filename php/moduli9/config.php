@@ -2,11 +2,11 @@
 $server = 'localhost';
 $username = 'root';
 $dbname = 'db';
-$password ='':
+$password ='';
 
     try{
         $connection = new PDO("mysql:host=$server;dbname=$dbname;",$surname,$password);
-    } cartch(Exception $e){
+    } catch(Exception $e){
         echo "error";
     }
 ?>
