@@ -11,7 +11,18 @@ if(isset($_POST['submit'])){
             $insertSql=$conn->prepare($sql);
             $insertSql->bindparam(':username',$username);
             $insertSql->execute();
+    
+    if($insertSql->rowCount()> 0){
+        $data = $insertSql->fetch();
+        if(password_verify($password,$data["password"])){
+            $_SESSION['username']=$data['username'];
+            header("Location: dashboard.php");
+        }else{
+            echo "Password Incorrect";
+            header("refresh:2; url=login.php");
         }
-}else{
-
+    }else{
+        echo "user not found!";
+    }
+}    
 }
