@@ -5,7 +5,7 @@ CREATE TABLE `users`(
     `email` varchar(255) NOT NULL,   
 	`password` varchar(255) NOT NULL,
 	`confirm_password` varchar(255) NOT NULL,
-    `is_admin` varchar(255)
+    `is_admin` varchar(255) NOT NULL
 	)
 	
 INSERT INTO `users` (`emri`,`username`,`email`,`password`,`confirm_password`,`is_admin`) VALUES('Elson','ElsonM','elson.morina@gmail.com','123456','123456','true'),
@@ -31,5 +31,7 @@ CREATE TABLE `bookings`(
     `nr_tickets` varchar(255) NOT NULL,   
 	`date` varchar(255) NOT NULL,
 	`is_approved` varchar(255) NOT NULL,
-    `time` varchar(255)
+    `time` varchar(255) NOT NULL
 	)
+
+INSERT INTO `bookings` (`user_id`,`movie_id`,`nr_tickets`,`date`,`is_approved`,`time`) VALUES (1,1,2, '2025-12-16','true','19:00');
