@@ -82,17 +82,17 @@ $races_data=$selectRaces->fetchALl();
     ?>
     <div class="col">
       <div class="card shadow-sm">
-        <img src="race_images/<?php echo $race_data['race_image'];?>" height="350">
+        <img src="project_images<?php echo $race_data['race_image'];?>" height="350">
         <div class="card-body">
           <h4><?php echo $race_data['race_name'] ?></h4>
-          <p class="card-text"><?php echo $race_data['race_time'] ?></p>
+          <p class="card-text">Time:<?php echo $race_data['race_time'] ?>PM</p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
              <a href="details.php?id=<?php echo $race_data['id'];?>" class="btn btn-sm btn-outline-secondary">View</a>
              <a href="edit.php?id=<?php echo $race_data['id'];?>" class="btn btn-sm btn-outline-secondary">Edit</a>
             </div>
             <small class="text-muted">Date:<?php echo $race_data['race_date']; ?></small>
-            <small class="text-muted"><?php echo $race_data['race_price']; ?></small>
+            <small class="text-muted">Price:<?php echo $race_data['race_price']; ?></small>
           </div>
         </div>
 

@@ -43,7 +43,7 @@
 					$_SESSION['email'] = $data['email'];
 					$_SESSION['emri'] = $data['emri'];
 
-					header('Location: dashboard.php');
+					header('Location: home.php');
 				}
 				else{
 					echo "The password is not valid
