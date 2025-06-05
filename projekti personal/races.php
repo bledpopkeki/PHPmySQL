@@ -1,9 +1,10 @@
 <?php 
-
-
   session_start();
-
+      if (empty($_SESSION['username'])) {
+          header("Location: login.php");
+    }
  ?>
+ 
 
  <!DOCTYPE html>
  <html>
@@ -49,7 +50,6 @@
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
       <ul class="nav flex-column">
-           <?php if ($_SESSION['is_admin'] == 'true') { ?>
             <li class="nav-item">
               <a class="nav-link" href="home.php">
                 <span data-feather="file"></span>
@@ -68,7 +68,6 @@
               Races
             </a>
           </li>
-        <?php } ?>
           <li class="nav-item">
             <a class="nav-link" href="bookings.php">
               <span ></span>

@@ -69,9 +69,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="list_movies.php">
+            <a class="nav-link" href="list_races.php">
               <span data-feather="file"></span>
-              Movies
+              Races
             </a>
           </li>
           <li class="nav-item">
@@ -94,8 +94,8 @@
 
   
 
-      <h2>Movies</h2>
-      <a href="movies.php" class="btn btn-primary">Add Movie</a>
+      <h2>Races</h2>
+      <a href="races.php" class="btn btn-primary">Add Movie</a>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
